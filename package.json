@@ -2,7 +2,7 @@
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "Full stack web app where users can view and create tech blog posts.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node seeds/index.js"
