@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #231010;
+    --color2: #D9EAD3;
+    --color3: rgb(161, 161, 161)
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--color2);
+}
+
+ol {
+    list-style: none;
+}
+
+header {
+    background-color: var(--color1);
+    width: 100%;
+    min-height: 15vh;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100vw);
+    width: 60vw;
+    height: 100vh;
+    background-color: var(--color1);
+    transition: all .5s ease-in-out;
+}
+
+nav.open {
+    transform: translateX(0%);
+}
+
+nav ul {
+    margin: 20vh auto 0 auto;
+    width: 100%;
+    height: 65%;
+}
+
+nav li {
+    color: var(--color2);
+    list-style: none;
+    width: 100%;
+    margin: 0 0 30px 40px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 28px;
+    margin: 0 auto;
+}
+
+nav li a:hover::before {
+    content: '> ';
+}
+
+.jumbo-title {
+    color: var(--color1);
+    background-color: var(--color2);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 7px 7px gray;
+    font-weight: bolder;
+}
+
+.jumbo-title:hover {
+    transform: translateY(7px);
+    box-shadow: none;
+}
+
+#menu-btn.open .line1 {
+    transform: rotate(-35deg) translateY(2px);
+}
+
+#menu-btn.open .line2 {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#menu-btn.open .line3 {
+    transform: rotate(35deg) translateY(-2px);
+}
+
+#menu-btn div {
+    width: 30px;
+    height:3px;
+    background-color: var(--color2);
+    margin: 7px;
+    transition: all .5s ease-in-out;
+}
+
+#welcome-header {
+    background-color: var(--color2);
+}
+
+#welcome-title {
+    color: var(--color1);
+}
+
+.login-prompt {
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--color1);
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.login-prompt div a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.login-prompt div a:hover {
+    text-decoration: none;
+    color: var(--color3);
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.post-list {
+    list-style: none;
+}
+
+.card {
+    border: 5px solid var(--color1);
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-header {
+    color: var(--color3);
+    background-color: var(--color1);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 65px;
+}
+
+.card-header a {
+    color: var(--color2);
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-header a:hover {
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    padding: 0px 20px 10px 20px;
+    font-size: 14px;
+}
+
+.comments {
+    margin-top: 40px;
+}
+
+.comment {
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment:nth-child(odd) {
+    background-color: #c6d8bf;
+}
+
+.text {
+    margin: 5px 10px;
+}
+
+.meta {
+    color: gray;
+}
+
+.meta span {
+    color: black;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; 
+    font-size: 22px;
+}
+
+#comment-area {
+    margin-top: 15px;
+}
+
+#email-login,
+#edit-title,
+#email-signup,
+#username-signup,
+#post-title,
+#post-content {
+    margin-bottom: 20px;
+}
+
+#post-content {
+    min-height: 80px;
+}
+
+.delete-post-btn {
+    color: darkred;
+}
+
+input {
+    border-style: none;
+    width: 100%;
+    padding: 10px 20px;
+    min-height: 35px;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+textarea {
+    border-style: none;
+    width: 100%;
+    padding: 10px 20px;
+    height: 175px;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+input text {
+    padding-left: 10px;
+}
+
+.new-post-btn {
+    margin: 0 auto 20px auto;
+    width: 175px;
+    border-radius: 5px;
+}
+
+.new-post-btn a {
+    text-decoration: none;
+}
+
+.new-post-btn:hover {
+    box-shadow: 5px 5px gray;
+    transform: translateY(-3px);
+}
+
+.new-post-btn h2 {
+    border-radius: 5px;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(105, 105, 105);
+    font-size: 22px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.edit-icon {
+    width: 25px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:  768px) {
+    main {
+        width: 65%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-around;
+        width: 100%;
+        min-height: 20vh;
+        padding-left: 21vw;
+        margin-bottom: 40px;
+        min-height: 20vh;
+    }
+
+    nav {
+        position: initial;
+        transform: translateX(0%);
+        width: 50vw;
+        height: initial;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: initial;
+        align-items: center;
+        /* width: 100%; */
+        margin: initial;
+        height: initial;
+    }
+
+    nav li {
+        margin: initial;
+        width: initial;
+    }
+
+    nav li a {
+        margin-right: 80px;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .card-header {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 35px;
+    }
+
+    .card-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #welcome-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .login-prompt {
+        max-width: 600px;
+        margin: 15px auto;
+    }
+}

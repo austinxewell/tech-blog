@@ -1,0 +1,42 @@
+<div class="new-post-btn">
+    <a href="/dashboard/newpost">
+        <h2 id="new-post-btn">+ New Post</h2>
+    </a>
+</div>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            <article class="card">
+                <div class="card-header">
+                    <a href="/post/{{id}}">
+                        <h2 class="card-title">
+                            {{title}}
+                        </h2>
+                    </a>
+                    <div class="card-meta">
+                        <div>
+                            Posted by <strong>{{user.username}}</strong> on {{format_date created_at}}
+                        </div>
+                        <div>
+                            <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {{post_content}}
+                </div>
+                <div class="card-footer">
+                    <a href="/dashboard/edit/{{post.id}}" class="edit-link">
+                        <img class="edit-icon" src="/images/edit.png" alt="">
+                    </a>
+                </div>
+            </article>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}

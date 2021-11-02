@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav-page">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/dashboard">Dashboard</a>
+                </li>
+                {{#if loggedIn}}
+                <li>
+                    <a id="logout">Log Out</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="/login">Log In</a>
+                </li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        <a href="/"><h1 class="jumbo-title">The Tech Blog</h1></a>
+
+        <div id="menu-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main>
+        {{#if loggedIn}}
+        {{else}}
+        <div id="welcome-card" class="card">
+            <div id="welcome-header" class="card-header">
+                <div id="welcome-title" class="card-title">
+                    <h2>Welcome to the Tech Blog! Click on the "Log In" menu to create an account!</h2>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{{ body }}}
+    </main>
+
+    <footer>
+        &copy; Austin Ewell 2021
+    </footer>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <script src="/javascript/nav.js"></script>
+</body>
+
+</html>

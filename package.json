@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SadboiTay/tech-blog.git"
+    "url": "git+https://github.com/austinxewell/tech-blog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SadboiTay/tech-blog/issues"
+    "url": "https://github.com/austinxewell/tech-blog/issues"
   },
-  "homepage": "https://github.com/SadboiTay/tech-blog#readme",
+  "homepage": "https://github.com/austinxewell/tech-blog#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
